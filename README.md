@@ -6,7 +6,7 @@ sudo apt update && sudo apt install build-essential libopenmpi-dev openmpi-bin l
 2. Como Compilar o Código
 Salvem o código C em um arquivo chamado trabalho_ppd.c. Para compilar, vocês não usarão o gcc normal, mas sim o compilador do MPI, passando a flag do OpenMP e linkando o OpenCV:
 
-mpicc -fopenmp trabalho_ppd.c -o trabalhador_video $(pkg-config --cflags --libs opencv4)
+mpic++ -fopenmp trabalho_ppd.c -o trabalhador_video $(pkg-config --cflags --libs opencv4)
 
 Se o comando acima der erro de pacote não encontrado, tentem trocar opencv4 apenas por opencv.
 
