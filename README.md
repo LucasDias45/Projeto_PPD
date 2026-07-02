@@ -18,4 +18,4 @@ mpirun -np 4 ./trabalhador_video
 4. Como Rodar Distribuído (O objetivo final do trabalho)
 Para rodar dividindo o processamento entre as várias VMs do VirtualBox, vocês precisam criar um arquivo de texto chamado hosts.txt contendo os IPs das máquinas virtuais do grupo. Depois, executem:
 
-mpirun -np 4 --hostfile hosts.txt ./trabalhador_video
+mpirun -np 4 --hostfile hosts --mca btl_tcp_if_include enp0s3 ./trabalhador_video
